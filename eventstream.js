@@ -3,9 +3,9 @@
  * Update AZURE_FUNCTION_URL when you deploy.
  */
 const EventSender = (() => {
-  // TODO: replace with your deployed function URL (include ?code=... if needed)
-  // Example: "https://<app>.azurewebsites.net/api/sendVARtoEventStream?code=XXXX"
-  const AZURE_FUNCTION_URL = "http://localhost:7071/api/sendVARtoEventStream";
+  // Full URL INCLUDING ?code=... is expected for Function-auth endpoints
+  const AZURE_FUNCTION_URL =
+    "https://pibi-ideas.azurewebsites.net/api/sendVARtoEventStream?code=CIZSqUymHcaJ93XrHH4aiGPkW464eyYuVQaSnLbEfB50AzFuXM7Hyg==";
 
   async function sendAnswers(username, answers) {
     const body = {
