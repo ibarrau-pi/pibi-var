@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-    <title>Desafío VAR - Mundial</title>
+    <title>Desafío VAR</title>
 
     <meta name="theme-color" content="#0b1220" />
     <style>
@@ -232,6 +232,12 @@
       .screen{ display:none; }
       .screen.active{ display:block; }
 
+      .logo {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+
       @media (min-width: 860px){
         .answers{ grid-template-columns: 1fr 1fr; }
         .hero h1{ font-size: 28px; }
@@ -241,23 +247,28 @@
   <body>
     <div class="safe">
       <div class="container">
+      
 
         <div class="topbar">
           <div class="brand">
             <span class="badge"><span class="dot"></span> EN VIVO</span>
             <div>
-              <div style="font-size:14px; font-weight:900;">Desafío VAR - Mundial</div>
-              <div style="font-size:12px; color:var(--muted); font-weight:700;">Elige la decisión correcta. Mira las estadísticas en vivo.</div>
+              <div style="font-size:14px; font-weight:900;">Desafío VAR</div>
+              <div style="font-size:12px; color:var(--muted); font-weight:700;">Presiona el botón con tu decisión</div>
             </div>
           </div>
-          <div class="chip" id="chipRound">20 jugadas</div>
+          
         </div>
+        
 
         <!-- PANTALLA INICIO -->
         <div class="card screen active" id="screenStart">
+          <div class="logo">
+            <img style="width: 150px;" src="./resources/LogoPiBi-DEFINITIVO.png" alt="VAR" />
+          </div><br>
           <div class="hero">
             <h1>¿Listo para el VAR?</h1>
-            <p>Mira 20 jugadas rápidas y elige la decisión correcta. Tus respuestas alimentan el tablero en Power BI en el stand del evento.</p>
+            <p>Mira 20 jugadas rápidas de VAR y decide. Esto se comparará con lo que el arbitro definió. Si coincide, sumas puntos.</p>
 
             <div class="form">
               <div>
@@ -281,7 +292,12 @@
         <div class="card screen" id="screenGame">
           <div class="gameHeader">
             <div class="chip" id="chipQuestion">VAR01</div>
-            <div class="chip" id="chipScore">Puntaje 0 / 0</div>
+            <!-- LOGO -->
+            <div class="logo">
+              <img style="width: 75px;" src="./resources/LogoPiBi-DEFINITIVO.png" alt="VAR" />
+            </div>
+          <div class="chip" id="chipRound">20 jugadas</div>
+            <!--<div class="chip" id="chipScore">Puntaje 0 / 0</div>-->
           </div>
 
           <div style="margin-top:12px;">
@@ -296,13 +312,15 @@
           <div class="answers" id="answers"></div>
 
           <div class="row" style="margin-top:12px;">
-            <button class="btn btnGhost" id="btnRestart" type="button">Reiniciar</button>
-            <button class="btn btnDanger" id="btnSkip" type="button">Saltar</button>
+            <button class="btn btnDanger" id="btnRestart" type="button">Reiniciar</button>
+            <!--<button class="btn btnDanger" id="btnSkip" type="button">Saltar</button>-->
           </div>
-
+		
+		<!--
           <div class="hint" style="margin-top:10px;">
             “Saltar” cuenta como 0 puntos.
           </div>
+		 -->
         </div>
 
         <!-- PANTALLA FINAL -->
@@ -310,12 +328,14 @@
           <div class="hero">
             <h1>¡Gracias por participar!</h1>
             <p>
-              Ven al <b>stand del evento</b> para ver las estadísticas en vivo y las jugadas más polémicas.
+              Vení al <b>stand de Pi Consulting</b> para ver el ranking de respuestas más acertadas en PiBi y buscar un premio sorpresa.
             </p>
 
-            <div class="row" style="margin-top:10px;">
+            <!--
+			<div class="row" style="margin-top:10px;">
               <div class="chip" id="finalSummary">Puntaje final: 0 / 20</div>
             </div>
+			-->
 
             <div class="row" style="margin-top:14px;">
               <button class="btn btnPrimary" id="btnPlayAgain" type="button">Jugar de nuevo</button>

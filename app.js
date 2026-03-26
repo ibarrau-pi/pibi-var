@@ -122,9 +122,6 @@
         score
       });
 
-      if (score === 1) { showToast("¡Correcto!"); vibrate(18); }
-      else { showToast("Uff… polémica."); vibrate([10, 60, 10]); }
-
       next();
     });
   }
@@ -159,16 +156,16 @@
   async function finish() {
     switchScreen("final");
     $progressBar.css("width", "100%");
-    $finalSummary.text(`Puntaje final: ${state.correct} / ${questions.length}`);
+    //$finalSummary.text(`Puntaje final: ${state.correct} / ${questions.length}`);
 
     // Send to your Azure Function (single POST)
     $finalSendHint.text("Enviando tus respuestas…");
 
     try {
       const res = await EventSender.sendAnswers(state.username, state.results);
-      $finalSendHint.text(`¡Listo! Respuestas enviadas (HTTP ${res.status}). Ve al stand para ver las estadísticas.`);
+      $finalSendHint.text(`¡Listo! Respuestas enviadas (HTTP ${res.status}). Ve al stand para ver el ranking de resultados.`);
     } catch (e) {
-      $finalSendHint.text(`No se pudieron enviar las respuestas: ${String(e)}`);
+      $finalSendHint.text(`No se pudieron enviar las respuestas, pasa por el stand de Pi para informarlo: ${String(e)}`);
     }
   }
 
