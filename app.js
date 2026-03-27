@@ -83,8 +83,17 @@
       showToast("No se pudo cargar el gif (revisa la URL).");
     });
 
-    $gif.attr("src", q.gif);
-    $gif.attr("alt", `Jugada ${q.question}`);
+    /*$gif.attr("src", q.gif);
+    $gif.attr("alt", `Jugada ${q.question}`);*/
+	$gif.attr("src", q.gif); // now this will be an .mp4 path
+	$gif.attr("aria-label", `Jugada ${q.question}`); // video doesn't use "alt"
+
+	// Force reload/play when switching questions
+	const el = $gif.get(0);
+	if (el) {
+	  el.load();
+	  el.play?.().catch(() => {});
+	}
 
     $answers.empty();
     const entries = Object.values(q.possible_answers || {});
