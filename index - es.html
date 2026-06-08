@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-    <title>VAR Challenge</title>
+    <title>Desafío VAR</title>
 
     <meta name="theme-color" content="#0b1220" />
     <style>
@@ -251,10 +251,10 @@
 
         <div class="topbar">
           <div class="brand">
-            <span class="badge"><span class="dot"></span> LIVE</span>
+            <span class="badge"><span class="dot"></span> EN VIVO</span>
             <div>
-              <div style="font-size:14px; font-weight:900;">VAR Challenge</div>
-              <div style="font-size:12px; color:var(--muted); font-weight:700;">Press the button with your decision</div>
+              <div style="font-size:14px; font-weight:900;">Desafío VAR</div>
+              <div style="font-size:12px; color:var(--muted); font-weight:700;">Presiona el botón con tu decisión</div>
             </div>
           </div>
           
@@ -267,22 +267,22 @@
             <img style="width: 150px;" src="./resources/LogoPiBi-DEFINITIVO.png" alt="VAR" />
           </div><br>
           <div class="hero">
-            <h1>Ready for VAR?</h1>
-            <p>Watch 20 quick VAR plays and decide. Your answers will be compared with the referee's decision. If they match, you score points.</p>
+            <h1>¿Listo para el VAR?</h1>
+            <p>Mira 20 jugadas rápidas de VAR y decide. Esto se comparará con lo que el arbitro definió. Si coincide, sumas puntos.</p>
 
             <div class="form">
               <div>
                 <label for="email">Email</label>
-                <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="name@company.com" />
-                <div class="hint" id="emailHint">Enter a valid email to enable “Start”.</div>
+                <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="nombre@empresa.com" />
+                <div class="hint" id="emailHint">Ingresa un email válido para habilitar “Empezar”.</div>
               </div>
 
               <div class="row">
-                <button class="btn btnPrimary" id="btnStart" type="button" disabled>Start</button>
+                <button class="btn btnPrimary" id="btnStart" type="button" disabled>Empezar</button>
               </div>
 
               <div class="hint">
-                Tip: answer quickly; your choice advances automatically.
+                Consejo: responde rápido; tu elección avanza automáticamente.
               </div>
             </div>
           </div>
@@ -296,8 +296,8 @@
             <div class="logo">
               <img style="width: 75px;" src="./resources/LogoPiBi-DEFINITIVO.png" alt="VAR" />
             </div>
-          <div class="chip" id="chipRound">20 plays</div>
-            <!--<div class="chip" id="chipScore">Score 0 / 0</div>-->
+          <div class="chip" id="chipRound">20 jugadas</div>
+            <!--<div class="chip" id="chipScore">Puntaje 0 / 0</div>-->
           </div>
 
           <div style="margin-top:12px;">
@@ -305,21 +305,21 @@
           </div>
 
           <div style="margin-top:14px;" class="gifWrap" id="gifWrap">
-            <!--<img id="gif" class="gif" alt="VAR play (gif)" />
-            <div class="gifLoading">Loading next play…</div>-->
+            <!--<img id="gif" class="gif" alt="Jugada VAR (gif)" />
+            <div class="gifLoading">Cargando próxima jugada…</div>-->
 			<video id="gif" class="gif" autoplay loop muted playsinline preload="auto"></video>
           </div>
 
           <div class="answers" id="answers"></div>
 
           <div class="row" style="margin-top:12px;">
-            <button class="btn btnDanger" id="btnRestart" type="button">Restart</button>
-            <!--<button class="btn btnDanger" id="btnSkip" type="button">Skip</button>-->
+            <button class="btn btnDanger" id="btnRestart" type="button">Reiniciar</button>
+            <!--<button class="btn btnDanger" id="btnSkip" type="button">Saltar</button>-->
           </div>
 		
 		<!--
           <div class="hint" style="margin-top:10px;">
-            “Skip” counts as 0 points.
+            “Saltar” cuenta como 0 puntos.
           </div>
 		 -->
         </div>
@@ -327,23 +327,23 @@
         <!-- PANTALLA FINAL -->
         <div class="card screen" id="screenFinal">
           <div class="hero">
-            <h1>Thanks for participating!</h1>
+            <h1>¡Gracias por participar!</h1>
             <p>
-              Come to the <b>Pi Consulting booth</b> to see the ranking of the most accurate answers in PiBi and look for a surprise prize.
+              Vení al <b>stand de Pi Consulting</b> para ver el ranking de respuestas más acertadas en PiBi y buscar un premio sorpresa.
             </p>
 
             <!--
 			<div class="row" style="margin-top:10px;">
-              <div class="chip" id="finalSummary">Final score: 0 / 20</div>
+              <div class="chip" id="finalSummary">Puntaje final: 0 / 20</div>
             </div>
 			-->
 
             <div class="row" style="margin-top:14px;">
-              <button class="btn btnPrimary" id="btnPlayAgain" type="button">Play again</button>
+              <button class="btn btnPrimary" id="btnPlayAgain" type="button">Jugar de nuevo</button>
             </div>
 
             <div class="hint" id="finalSendHint" style="margin-top:10px;">
-              In the next step we will connect this to Eventstream (Entra ID / Event Hub).
+              En el siguiente paso conectaremos esto a Eventstream (Entra ID / Event Hub).
             </div>
           </div>
         </div>
