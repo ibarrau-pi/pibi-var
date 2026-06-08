@@ -5,8 +5,8 @@
 const EventSender = (() => {
   // Full URL INCLUDING ?code=... is expected for Function-auth endpoints
   const AZURE_FUNCTION_URL =
-	"https://azf-producto-csfwh0a2gxd4cda2.eastus2-01.azurewebsites.net/api/sendVARtoEventStream?code=LRNsJHemtSvQulA-pjU3GyVZ5AkpZcVHVmloWnkmvyK7AzFur8az6A=="
-    //"https://pibi-ideas.azurewebsites.net/api/sendVARtoEventStream?code=CIZSqUymHcaJ93XrHH4aiGPkW464eyYuVQaSnLbEfB50AzFuXM7Hyg==";
+  "https://pibi-ideas.azurewebsites.net/api/sendVARtoEventStream?code=CIZSqUymHcaJ93XrHH4aiGPkW464eyYuVQaSnLbEfB50AzFuXM7Hyg==";
+  //"https://azf-producto-csfwh0a2gxd4cda2.eastus2-01.azurewebsites.net/api/sendVARtoEventStream?code=LRNsJHemtSvQulA-pjU3GyVZ5AkpZcVHVmloWnkmvyK7AzFur8az6A=="
 
   async function sendAnswers(username, answers) {
     const body = {
